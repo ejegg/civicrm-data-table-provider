@@ -31,9 +31,9 @@ final class DataTable extends AbstractHttpProvider implements Provider
     /**
      * @var string
      */
-    private $tableName;
+    private string $tableName;
 
-    private $columns;
+    private array $columns;
 
   /**
    * @param HttpClient $client
@@ -41,7 +41,7 @@ final class DataTable extends AbstractHttpProvider implements Provider
    *
    * @throws \Exception
    */
-    public function __construct(ClientInterface $client, $metadata)
+    public function __construct(ClientInterface $client, array $metadata)
     {
         parent::__construct($client);
 
