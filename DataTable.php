@@ -19,7 +19,6 @@ use Geocoder\Query\GeocodeQuery;
 use Geocoder\Query\ReverseQuery;
 use Geocoder\Http\Provider\AbstractHttpProvider;
 use Geocoder\Provider\Provider;
-use Http\Client\HttpClient;
 use Geocoder\Exception\CollectionIsEmpty;
 use Psr\Http\Client\ClientInterface;
 
@@ -36,7 +35,7 @@ final class DataTable extends AbstractHttpProvider implements Provider
     private array $columns;
 
   /**
-   * @param HttpClient $client
+   * @param ClientInterface $client
    * @param array $metadata
    *
    * @throws \Exception
